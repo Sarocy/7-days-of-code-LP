@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<script>
+    alert("Oi! Seja bem vindo ao nosso jogo de carreira!");
+    area = prompt("Caso você prefira seguir carreira na área de Front-End digite 1, caso você prefira Back-End digite 2");
+
+
+    if(area == 1){
+        opcao1 = prompt("Caso você queira aprender React digite 1, caso você queira aprender Vue digite 2");
+        pergunta = prompt("Você gostaria de seguir se especializando em Front-End (digite 1 para essa opção) ou seguir se desenvolvendo para se tornar FullStack? (digite 2 para essa opção)");
+    }
+
+    if(area == 2){
+        opcao1 = prompt("Caso você queira aprender C# digite 1, caso você queira aprender Java digite 2");  
+        pergunta = prompt("Você gostaria de seguir se especializando em Back-End (digite 1 para essa opção) ou seguir se desenvolvendo para se tornar FullStack? (digite 2 para essa opção)");
+    }
+
+    tecnologias = [];
+    tecnologias[0] = prompt("Quais tecnologias você gostaria de se especializar ou conhecer?");
+    adicionar = 1;
+
+    while(adicionar == 1){
+        adicionar = prompt("Tem mais alguma tecnologia que você gostaria de aprender? Digite 1 para SIM e 2 para NÃO");
+        if(adicionar == 1){
+            var i = prompt("Qual?");
+            tecnologias.push(i);
+        }
+        else{
+            break;
+        }
+
+    }
+
+    
+</script>

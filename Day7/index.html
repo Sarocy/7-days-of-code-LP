@@ -1,0 +1,70 @@
+<meta charset="UTF-8">
+
+<script>
+function soma(x, y) {
+  return x + y
+}
+
+function sobtracao(x, y) {
+  return x - y
+}
+
+function multiplicacao(x, y) {
+  return x * y
+}
+
+function divisao(x, y) {
+  return x / y
+}
+
+let aux;
+let resultado;
+let valor1;
+let valor2;
+
+while (aux != 0) {
+  resultado = []
+  aux = parseInt(prompt('Para sair do sistema, digite: 0\nPara somar dois valores, digite: 1\nPara subtrair dois valores, digite: 2\nPara multiplicar dois valores, digite: 3\nPara dividir dois valores, digite: 4'))
+
+  if (aux == 0) {
+    if (resultado.length > 1) {
+      document.write(mostraResultado())
+    }
+    break;
+  }
+
+  valor1 = parseFloat(prompt('Primeiro valor: '))
+  valor2 = parseFloat(prompt('Segundo valor: '))
+
+  switch (aux) {
+    case 1:
+      resultado = ['soma', soma(valor1, valor2)]
+      alert(mostraResultado())
+      break;
+    case 2:
+      resultado = ['subtração', sobtracao(valor1, valor2)]
+      alert(mostraResultado())
+      break;
+    case 3:
+      resultado = ['multiplicação', multiplicacao(valor1, valor2)]
+      alert(mostraResultado())
+      break;
+    case 4:
+      if (valor2 == 0) {
+        alert('Não é possível divir por zero.')
+      } else {
+        resultado = ['divisão', divisao(valor1, valor2)]
+        alert(mostraResultado())
+      }
+      break;
+    default:
+      alert('Não existe esta opção!')
+  }
+}
+
+function mostraResultado() {
+  return `A ${resultado[0]} entre ${valor1} e ${valor2} é ${resultado[1]}`
+}
+
+
+</script>

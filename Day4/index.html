@@ -1,0 +1,41 @@
+<meta charset = "UTF=8">
+
+
+<script>
+
+   var numeroSecreto = Math.round(Math.random() * 10);
+   var tentativas = 3;
+
+   var chute = parseInt(prompt('Tente adivinhar em que número pensei'));
+
+     var numero = 1;
+
+     while(numero <= tentativas){
+       
+        if(chute== numeroSecreto){
+            alert("Você ACERTOU! O número pensado foi " + numeroSecreto);
+             break;
+        }
+        else{
+            if((tentativas - numero) == 1){
+                chute = prompt("Você ERROU! É a sua ultima chance");
+            }else
+            if((tentativas - numero) == 0){
+                chute = prompt("Você perdeu :( O número pensado foi " + numeroSecreto);
+            }else{
+                chute = prompt("Você ERROU! Mas tem mais " + (tentativas - numero) + " chances");
+                
+            }
+
+            numero++;
+            
+        }
+
+
+     }
+
+        
+
+    
+
+</script>
